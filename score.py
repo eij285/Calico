@@ -3,7 +3,7 @@ from Errors import InvalidTokenError
 
 
 # Scores button tile by verifying valid placement through breadth search
-def scoreButton(g, node, button_color):
+def score_button(g, node, button_color):
     # Check neighouring tiles until we find 3 that have the same color
     queue = g.neighbors(node)
     
@@ -21,11 +21,11 @@ def scoreButton(g, node, button_color):
     
 
 # Scores cat tile through breadth search
-def scoreCat(graph, value, type, design):
+def score_cat(graph, value, type, design):
     return value
 
 # Scores design tile by checking neighbouring nodes and seeing if its satisfied
-def scoreDesignTile(graph, value1, value2):
+def score_design_tile(graph, value1, value2):
     return 0
 
 
