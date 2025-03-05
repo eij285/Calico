@@ -48,8 +48,11 @@ def is_valid_button(g, node, button_color):
     return False
 
 # Scores button tile by verifying valid placement through breadth search
-def score_button():
-    return 3
+def score_button(g, node, button_color):
+    if is_valid_button(g, node, button_color):
+        return 3
+    else:
+        raise InvalidTokenError
 
 # Scores cat tile through breadth search
 def score_cat(graph, value, type, design):
